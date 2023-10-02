@@ -23,7 +23,7 @@ services:
   redis:
     image: elestio/redis:7.0
     restart: always
-    command: --port 6379
+    command: ["redis-server", "--requirepass", "${REDIS_PASSWORD}"]
     volumes:
       - ./storage/lago_redis_data:/data
     ports:
