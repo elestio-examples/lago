@@ -30,7 +30,7 @@ services:
       - 172.17.0.1:31542:6379
 
   api:
-    image: getlago/api:v0.48.0-beta
+    image: getlago/api:${SOFTWARE_VERSION_TAG}
     restart: always
     depends_on:
       - db
@@ -75,7 +75,7 @@ services:
       - 172.17.0.1:17840:3000
 
   front:
-    image: getlago/front:v0.48.0-beta
+    image: getlago/front:${SOFTWARE_VERSION_TAG}
     restart: always
     # Use this command if you want to use SSL with Let's Encrypt
     # command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
@@ -112,7 +112,7 @@ services:
   #     - ./extra/certbot/www:/var/www/certbot
 
   api-worker:
-    image: getlago/api:v0.48.0-beta
+    image: getlago/api:${SOFTWARE_VERSION_TAG}
     restart: always
     depends_on:
       - api
@@ -149,7 +149,7 @@ services:
       - ./storage/lago_storage_data:/app/storage
 
   api-clock:
-    image: getlago/api:v0.48.0-beta
+    image: getlago/api:${SOFTWARE_VERSION_TAG}
     restart: always
     depends_on:
       - api
