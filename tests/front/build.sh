@@ -32,6 +32,7 @@ cat <<EOT > ./servers.json
 }
 EOT
 
-sed -i "s~RUN yarn &&~RUN yarn install --network-timeout 600000 &&~g" ./Dockerfile
+sed -i 's/RUN yarn &&/RUN yarn install --network-timeout 600000 \&\&/g' ./Dockerfile
+
 
 docker buildx build . --output type=docker,name=elestio4test/lago-front:latest | docker load
