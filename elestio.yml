@@ -31,7 +31,7 @@ ports:
     public: true
 environments:
   - key: "SOFTWARE_VERSION_TAG"
-    value: "latest"
+    value: "v1.5.1"
   - key: "ADMIN_EMAIL"
     value: "[EMAIL]"
   - key: "ADMIN_PASSWORD"
