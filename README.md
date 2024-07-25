@@ -39,3 +39,7 @@ For example to list all billable metrics you can do this curl command:
 Your api key is stored on Developers tab in the left section.
 
 for more information about the API: <a href="https://docs.getlago.com/api-reference/intro">API Reference </a>
+
+# GoCardless
+
+If you want to use GoCardless integration, you'll have to provide your `GOCARDLESS_CLIENT_ID` and `GOCARDLESS_CLIENT_SECRET` in the `Environment variables` then click on `Apply Changes` to restart your app.
